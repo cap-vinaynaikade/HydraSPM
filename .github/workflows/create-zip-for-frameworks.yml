@@ -108,6 +108,9 @@ jobs:
         with:
           name: zip-files
           path: zip-files
+          
+      - name: Checkout Repository
+        uses: actions/checkout@v4
   
       - name: Create Git Tag
         run: |
