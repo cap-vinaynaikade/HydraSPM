@@ -2,7 +2,8 @@ name: Create Tag and GitHub Release
 
 on:
   workflow_run:
-    workflows: ["Create zip for XCFrameworks"]  # Ensure it runs after the first workflow
+    workflows: ["Create zip for XCFrameworks"]
+    branches: ["release-*"]  # Add this if missing
     types:
       - completed
 
