@@ -1,0 +1,14 @@
+{
+    "senderSource": "capillary-engage",
+    "scope": "87145",
+    "cuid": "917418000632",
+    "campaignId": "645",
+    "variationId": "2",
+    "messageId": "3478",
+    "accountId": "fki-7723",
+    "gateway": "fcm",
+    "senderId": "\"REONDATAWE\" <reon@chat.in>, <reon@chat.in>",
+    "body": "{\"title\":\"dummyTitle\",\"message\":\"dummyMessage\",\"image\":\"\",\"cta\": {\"action\":\"cap://sign_in\",\"type\":\"DEEP_LINK\"}}",
+    "expandableDetails": "{\"message\":\"\",\"image\":\"\",\"style\":\"\",\"ctas\":[{\"actionText\":\"t1\",\"action\":\"google.com\",\"type\":\"EXTERNAL_URL\"},{\"actionText\":\"t2\",\"action\":\"google.com\",\"type\":\"EXTERNAL_URL\"}]}",
+    "trigger": "{\"eventName\":\"INSTANT\",\"attributes\":\"{\"atr1\":\"val1\"}\"}"
+}

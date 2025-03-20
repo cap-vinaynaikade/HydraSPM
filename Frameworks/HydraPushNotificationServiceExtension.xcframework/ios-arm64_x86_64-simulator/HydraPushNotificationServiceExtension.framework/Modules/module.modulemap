@@ -1,0 +1,11 @@
+framework module HydraPushNotificationServiceExtension {
+  umbrella header "HydraPushNotificationServiceExtension.h"
+  export *
+
+  module * { export * }
+}
+
+module HydraPushNotificationServiceExtension.Swift {
+  header "HydraPushNotificationServiceExtension-Swift.h"
+  requires objc
+}
