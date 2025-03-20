@@ -33,11 +33,11 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .binaryTarget(name: "HydraCore", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraCore.zip", checksum: "0521116b19df446d79c3907f4202a62cfe43d9e3b683aec2cbdf804f613b122e"),
-        .binaryTarget(name: "HydraInAppMessage", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraInAppMessage.zip", checksum: "ea01f524acc39d1462648e022e6ac3032e75ede6a5bc0acc43fb689d2c7bc50a"),
-        .binaryTarget(name: "HydraPushNotification", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraPushNotification.zip", checksum: "85f0ebc233d47900c5f8126a1fd8e28aef663769f2594b8ff1017ae64f0422c0"),
-        .binaryTarget(name: "HydraPushNotificationServiceExtension", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraPushNotificationServiceExtension.zip", checksum: "0201d1f68504ac8ab40d0b47ff99adb1388f11bbf07b876fde6eb92040cab3be"),
-        .binaryTarget(name: "HydraInboxCore", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraInboxCore.zip", checksum: "3541b4f25ecb521d627482ba96eec0a6417703ca193ebee3ce5b164b3788758f"),
-        .binaryTarget(name: "HydraInboxUI", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraInboxUI.zip", checksum: "54084d4b6f91f53aafcdd375dede9a5f75ba55347af17eb2629bde7585fe64b6"),
+        .binaryTarget(name: "HydraCore", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraCore.zip", checksum: "b2bb490e3de0e299e57cb40eaaf241a29001da42eebedf57bd263f261294bf4c"),
+        .binaryTarget(name: "HydraInAppMessage", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraInAppMessage.zip", checksum: "b90015811e7325a95e35bd1355242eb02d56748c0780b714398f834849f8545e"),
+        .binaryTarget(name: "HydraPushNotification", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraPushNotification.zip", checksum: "28b3c3beaf74c8d0d9492e025fde8713137db7672a155b5e3c757f46dee09b55"),
+        .binaryTarget(name: "HydraPushNotificationServiceExtension", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraPushNotificationServiceExtension.zip", checksum: "754abb52d7dbd275fbf4e2534c9e053f126cc3f587187f7e9d7cd5426736996c"),
+        .binaryTarget(name: "HydraInboxCore", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraInboxCore.zip", checksum: "d9c18ab3a6d6c2d1b6a6a29ad8d2ad389bc1faf1a1114b8ae463ef6e798b962a"),
+        .binaryTarget(name: "HydraInboxUI", url: "https://github.com/cap-vinaynaikade/HydraSPM/releases/download/1.0.6/HydraInboxUI.zip", checksum: "7b2a8d46d611a02ce380d0040e9f45db06743d9e0b5035af28ddbc41858dbf13"),
     ]
 )
