@@ -44,6 +44,6 @@ jobs:
           tag_name: ${{ env.NEW_TAG }}
           name: Release ${{ env.NEW_TAG }}
           files: zip-files/*.zip  # Fixing file selection
-          token: ${{ secrets.TARGET_REPO_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           draft: true
           prerelease: true
