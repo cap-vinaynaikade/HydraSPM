@@ -76,15 +76,17 @@ jobs:
       - name: Upload zip files as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: zip
-          path: build/*
+          name: zip-files
+          path: build/*.zip
+
+      - name: Upload NEW_TAG as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-tag
+          path: new_tag.txt
 
       - name: Clean Build Directory
-        run: |
-          rm -rf build
-          rm -rf Frameworks
-          rm -f checksums.txt
-          rm -f new_tag.txt
+        run: rm -rf build Frameworks checksums.txt new_tag.txt
 
       - name: Commit Updated Package.swift
         run: |
