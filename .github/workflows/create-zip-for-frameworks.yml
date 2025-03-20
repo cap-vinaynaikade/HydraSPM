@@ -5,6 +5,9 @@ on:
     branches:
       - release-*
 
+permissions:
+  contents: write  # Grant write permissions to GitHub Actions      
+
 jobs:
   release:
     name: Build and Update Package.swift
