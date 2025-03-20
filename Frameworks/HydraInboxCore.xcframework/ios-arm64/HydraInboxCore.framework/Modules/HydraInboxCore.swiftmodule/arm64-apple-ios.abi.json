@@ -1,0 +1,1012 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "HydraInboxCore",
+    "printedName": "HydraInboxCore",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HydraInboxCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "HydraCore",
+        "printedName": "HydraCore",
+        "declKind": "Import",
+        "moduleName": "HydraInboxCore"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InboxCoreConfiguration",
+        "printedName": "InboxCoreConfiguration",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "maximumNotificationCount",
+            "printedName": "maximumNotificationCount",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14HydraInboxCore0bC13ConfigurationC24maximumNotificationCountSiSgvp",
+            "mangledName": "$s14HydraInboxCore0bC13ConfigurationC24maximumNotificationCountSiSgvp",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14HydraInboxCore0bC13ConfigurationC24maximumNotificationCountSiSgvg",
+                "mangledName": "$s14HydraInboxCore0bC13ConfigurationC24maximumNotificationCountSiSgvg",
+                "moduleName": "HydraInboxCore",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14HydraInboxCore0bC13ConfigurationC24maximumNotificationCountSiSgvs",
+                "mangledName": "$s14HydraInboxCore0bC13ConfigurationC24maximumNotificationCountSiSgvs",
+                "moduleName": "HydraInboxCore",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14HydraInboxCore0bC13ConfigurationC24maximumNotificationCountSiSgvM",
+                "mangledName": "$s14HydraInboxCore0bC13ConfigurationC24maximumNotificationCountSiSgvM",
+                "moduleName": "HydraInboxCore",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "hydraConfig",
+            "printedName": "hydraConfig",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "ConfigurationGenerator",
+                "printedName": "any HydraCore.ConfigurationGenerator",
+                "usr": "s:9HydraCore22ConfigurationGeneratorP"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14HydraInboxCore0bC13ConfigurationC11hydraConfig0aC00D9Generator_pvp",
+            "mangledName": "$s14HydraInboxCore0bC13ConfigurationC11hydraConfig0aC00D9Generator_pvp",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConfigurationGenerator",
+                    "printedName": "any HydraCore.ConfigurationGenerator",
+                    "usr": "s:9HydraCore22ConfigurationGeneratorP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14HydraInboxCore0bC13ConfigurationC11hydraConfig0aC00D9Generator_pvg",
+                "mangledName": "$s14HydraInboxCore0bC13ConfigurationC11hydraConfig0aC00D9Generator_pvg",
+                "moduleName": "HydraInboxCore",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ConfigurationGenerator",
+                    "printedName": "any HydraCore.ConfigurationGenerator",
+                    "usr": "s:9HydraCore22ConfigurationGeneratorP"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14HydraInboxCore0bC13ConfigurationC11hydraConfig0aC00D9Generator_pvs",
+                "mangledName": "$s14HydraInboxCore0bC13ConfigurationC11hydraConfig0aC00D9Generator_pvs",
+                "moduleName": "HydraInboxCore",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14HydraInboxCore0bC13ConfigurationC11hydraConfig0aC00D9Generator_pvM",
+                "mangledName": "$s14HydraInboxCore0bC13ConfigurationC11hydraConfig0aC00D9Generator_pvM",
+                "moduleName": "HydraInboxCore",
+                "implicit": true,
+                "isOpen": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(hydraConfig:maximumNotificationCount:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InboxCoreConfiguration",
+                "printedName": "HydraInboxCore.InboxCoreConfiguration",
+                "usr": "s:14HydraInboxCore0bC13ConfigurationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ConfigurationGenerator",
+                "printedName": "any HydraCore.ConfigurationGenerator",
+                "usr": "s:9HydraCore22ConfigurationGeneratorP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14HydraInboxCore0bC13ConfigurationC11hydraConfig24maximumNotificationCountAC0aC00D9Generator_p_SiSgtcfc",
+            "mangledName": "$s14HydraInboxCore0bC13ConfigurationC11hydraConfig24maximumNotificationCountAC0aC00D9Generator_p_SiSgtcfc",
+            "moduleName": "HydraInboxCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "update",
+            "printedName": "update(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any HydraCore.HydraInboxCoreConfigGenerator)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HydraInboxCoreConfigGenerator",
+                    "printedName": "any HydraCore.HydraInboxCoreConfigGenerator",
+                    "usr": "s:9HydraCore0a5InboxB15ConfigGeneratorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC13ConfigurationC6update4withy0aC00abC15ConfigGenerator_pSg_tF",
+            "mangledName": "$s14HydraInboxCore0bC13ConfigurationC6update4withy0aC00abC15ConfigGenerator_pSg_tF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14HydraInboxCore0bC13ConfigurationC",
+        "mangledName": "$s14HydraInboxCore0bC13ConfigurationC",
+        "moduleName": "HydraInboxCore",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "HydraInboxCoreConfigGenerator",
+            "printedName": "HydraInboxCoreConfigGenerator",
+            "usr": "s:9HydraCore0a5InboxB15ConfigGeneratorP",
+            "mangledName": "$s9HydraCore0a5InboxB15ConfigGeneratorP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "HydraInboxCore",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "HydraCore",
+        "printedName": "HydraCore",
+        "declKind": "Import",
+        "moduleName": "HydraInboxCore"
+      },
+      {
+        "kind": "Import",
+        "name": "HydraPushNotification",
+        "printedName": "HydraPushNotification",
+        "declKind": "Import",
+        "moduleName": "HydraInboxCore"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HydraInboxUIProtocol",
+        "printedName": "HydraInboxUIProtocol",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "refreshNotificationList",
+            "printedName": "refreshNotificationList()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0aB10UIProtocolP23refreshNotificationListyyF",
+            "mangledName": "$s14HydraInboxCore0aB10UIProtocolP23refreshNotificationListyyF",
+            "moduleName": "HydraInboxCore",
+            "genericSig": "<τ_0_0 where τ_0_0 : HydraInboxCore.HydraInboxUIProtocol>",
+            "sugared_genericSig": "<Self where Self : HydraInboxCore.HydraInboxUIProtocol>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14HydraInboxCore0aB10UIProtocolP",
+        "mangledName": "$s14HydraInboxCore0aB10UIProtocolP",
+        "moduleName": "HydraInboxCore",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "InboxCore",
+        "printedName": "InboxCore",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "env",
+            "printedName": "env",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Env",
+                "printedName": "HydraCore.Env",
+                "usr": "s:9HydraCore3EnvO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14HydraInboxCore0bC0C3env0aC03EnvOvp",
+            "mangledName": "$s14HydraInboxCore0bC0C3env0aC03EnvOvp",
+            "moduleName": "HydraInboxCore",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Env",
+                    "printedName": "HydraCore.Env",
+                    "usr": "s:9HydraCore3EnvO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14HydraInboxCore0bC0C3env0aC03EnvOvg",
+                "mangledName": "$s14HydraInboxCore0bC0C3env0aC03EnvOvg",
+                "moduleName": "HydraInboxCore",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(with:configuredFor:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "InboxCore",
+                "printedName": "HydraInboxCore.InboxCore",
+                "usr": "s:14HydraInboxCore0bC0C"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HydraInboxCoreConfigGenerator",
+                "printedName": "any HydraCore.HydraInboxCoreConfigGenerator",
+                "usr": "s:9HydraCore0a5InboxB15ConfigGeneratorP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Env",
+                "printedName": "HydraCore.Env",
+                "hasDefaultArg": true,
+                "usr": "s:9HydraCore3EnvO"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14HydraInboxCore0bC0C4with13configuredForAC0aC00abC15ConfigGenerator_p_AF3EnvOtKcfc",
+            "mangledName": "$s14HydraInboxCore0bC0C4with13configuredForAC0aC00abC15ConfigGenerator_p_AF3EnvOtKcfc",
+            "moduleName": "HydraInboxCore",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "handleNotification",
+            "printedName": "handleNotification(notification:action:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HydraNotificationPayload",
+                "printedName": "HydraCore.HydraNotificationPayload",
+                "usr": "s:9HydraCore0A19NotificationPayloadV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HydraNotificationAction",
+                "printedName": "HydraCore.HydraNotificationAction",
+                "usr": "s:9HydraCore0A18NotificationActionO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Bool) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C18handleNotification12notification6action10completiony0aC00aE7PayloadV_AH0aE6ActionOySbcSgtF",
+            "mangledName": "$s14HydraInboxCore0bC0C18handleNotification12notification6action10completiony0aC00aE7PayloadV_AH0aE6ActionOySbcSgtF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "handleDeleteAllNotifications",
+            "printedName": "handleDeleteAllNotifications(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Bool) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C28handleDeleteAllNotifications10completionyySbcSg_tF",
+            "mangledName": "$s14HydraInboxCore0bC0C28handleDeleteAllNotifications10completionyySbcSg_tF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getUnreadNotificationCount",
+            "printedName": "getUnreadNotificationCount(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Int) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C26getUnreadNotificationCount10completionyySic_tF",
+            "mangledName": "$s14HydraInboxCore0bC0C26getUnreadNotificationCount10completionyySic_tF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getNotifications",
+            "printedName": "getNotifications(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "([HydraCore.HydraNotificationPayload]) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[HydraCore.HydraNotificationPayload]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HydraNotificationPayload",
+                        "printedName": "HydraCore.HydraNotificationPayload",
+                        "usr": "s:9HydraCore0A19NotificationPayloadV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C16getNotifications10completionyySay0aC00A19NotificationPayloadVGc_tF",
+            "mangledName": "$s14HydraInboxCore0bC0C16getNotifications10completionyySay0aC00A19NotificationPayloadVGc_tF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setHydraInboxUIDelegate",
+            "printedName": "setHydraInboxUIDelegate(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any HydraInboxCore.HydraInboxUIProtocol)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HydraInboxUIProtocol",
+                    "printedName": "any HydraInboxCore.HydraInboxUIProtocol",
+                    "usr": "s:14HydraInboxCore0aB10UIProtocolP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C03setaB10UIDelegate8delegateyAA0aB10UIProtocol_pSg_tF",
+            "mangledName": "$s14HydraInboxCore0bC0C03setaB10UIDelegate8delegateyAA0aB10UIProtocol_pSg_tF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "performNotificationAction",
+            "printedName": "performNotificationAction(notification:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HydraNotificationPayload",
+                "printedName": "HydraCore.HydraNotificationPayload",
+                "usr": "s:9HydraCore0A19NotificationPayloadV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C25performNotificationAction12notificationy0aC00aE7PayloadV_tF",
+            "mangledName": "$s14HydraInboxCore0bC0C25performNotificationAction12notificationy0aC00aE7PayloadV_tF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "performNotificationExpandableCtaAction",
+            "printedName": "performNotificationExpandableCtaAction(notification:cta:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "HydraNotificationPayload",
+                "printedName": "HydraCore.HydraNotificationPayload",
+                "usr": "s:9HydraCore0A19NotificationPayloadV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CTA",
+                "printedName": "HydraCore.CTA",
+                "usr": "s:9HydraCore3CTAV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C38performNotificationExpandableCtaAction12notification3ctay0aC00aE7PayloadV_AG3CTAVtF",
+            "mangledName": "$s14HydraInboxCore0bC0C38performNotificationExpandableCtaAction12notification3ctay0aC00aE7PayloadV_AG3CTAVtF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "deleteAllNotifications",
+            "printedName": "deleteAllNotifications(completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((Swift.Bool) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.Bool) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Bool",
+                        "printedName": "Swift.Bool",
+                        "usr": "s:Sb"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C22deleteAllNotifications10completionyySbcSg_tF",
+            "mangledName": "$s14HydraInboxCore0bC0C22deleteAllNotifications10completionyySbcSg_tF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getCurrentNotificationList",
+            "printedName": "getCurrentNotificationList()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[HydraCore.HydraNotificationPayload]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "HydraNotificationPayload",
+                    "printedName": "HydraCore.HydraNotificationPayload",
+                    "usr": "s:9HydraCore0A19NotificationPayloadV"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C26getCurrentNotificationListSay0aC00aF7PayloadVGyF",
+            "mangledName": "$s14HydraInboxCore0bC0C26getCurrentNotificationListSay0aC00aF7PayloadVGyF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "refreshNotificationList",
+            "printedName": "refreshNotificationList()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C23refreshNotificationListyyF",
+            "mangledName": "$s14HydraInboxCore0bC0C23refreshNotificationListyyF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getReceiverType",
+            "printedName": "getReceiverType()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "NotificationsReceiverType",
+                "printedName": "HydraPushNotification.NotificationsReceiverType",
+                "usr": "s:21HydraPushNotification25NotificationsReceiverTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C15getReceiverType0A16PushNotification013NotificationseF0OyF",
+            "mangledName": "$s14HydraInboxCore0bC0C15getReceiverType0A16PushNotification013NotificationseF0OyF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "notificationsReceived",
+            "printedName": "notificationsReceived(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[HydraCore.HydraNotificationPayload]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[HydraCore.HydraNotificationPayload]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "HydraNotificationPayload",
+                        "printedName": "HydraCore.HydraNotificationPayload",
+                        "usr": "s:9HydraCore0A19NotificationPayloadV"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14HydraInboxCore0bC0C21notificationsReceived4withySay0aC00A19NotificationPayloadVGSg_tF",
+            "mangledName": "$s14HydraInboxCore0bC0C21notificationsReceived4withySay0aC00A19NotificationPayloadVGSg_tF",
+            "moduleName": "HydraInboxCore",
+            "isOpen": true,
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14HydraInboxCore0bC0C",
+        "mangledName": "$s14HydraInboxCore0bC0C",
+        "moduleName": "HydraInboxCore",
+        "isOpen": true,
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "HydraInboxCoreProtocol",
+            "printedName": "HydraInboxCoreProtocol",
+            "usr": "s:9HydraCore0a5InboxB8ProtocolP",
+            "mangledName": "$s9HydraCore0a5InboxB8ProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "HydraNotificationsReceiverProtocol",
+            "printedName": "HydraNotificationsReceiverProtocol",
+            "usr": "s:21HydraPushNotification0A29NotificationsReceiverProtocolP",
+            "mangledName": "$s21HydraPushNotification0A29NotificationsReceiverProtocolP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/vinaynaikade\/Documents\/Capillary\/hydra-sdk-ios\/HydraInboxCore\/Core\/InboxCore.swift",
+      "kind": "Array",
+      "offset": 375,
+      "length": 2,
+      "value": "[]"
+    }
+  ]
+}
