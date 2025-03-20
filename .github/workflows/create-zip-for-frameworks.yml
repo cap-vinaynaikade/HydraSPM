@@ -17,22 +17,22 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Clean Build Directory
+        run: |
+          rm -rf build
+          rm -f checksums.txt
+          rm -f new_tag.txt
+
       - name: Extract Release Version from Branch Name
         run: |
           BRANCH_NAME=$(echo "${{ github.ref }}" | sed 's|refs/heads/release-||')
           echo "Extracted branch name: $BRANCH_NAME"
           if [[ "$BRANCH_NAME" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             echo "NEW_TAG=$BRANCH_NAME" >> $GITHUB_ENV
-            echo "$BRANCH_NAME" > new_tag.txt
           else
             echo "Branch name does not follow release-<version> format."
             exit 1
           fi
-
-      - name: Clean Build Directory
-        run: |
-          rm -rf build
-          rm -f checksums.txt
 
       - name: Zip XCFrameworks
         run: |
@@ -82,6 +82,7 @@ jobs:
       - name: Clean Build Directory
         run: |
           rm -rf build
+          rm -rf Frameworks
           rm -f checksums.txt
 
       - name: Commit Updated Package.swift
