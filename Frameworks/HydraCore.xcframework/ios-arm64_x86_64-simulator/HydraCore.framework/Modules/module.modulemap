@@ -1,0 +1,11 @@
+framework module HydraCore {
+  umbrella header "HydraCore.h"
+  export *
+
+  module * { export * }
+}
+
+module HydraCore.Swift {
+  header "HydraCore-Swift.h"
+  requires objc
+}
