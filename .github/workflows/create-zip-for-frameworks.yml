@@ -84,13 +84,14 @@ jobs:
           rm -rf build
           rm -rf Frameworks
           rm -f checksums.txt
+          rm -f new_tag.txt
 
       - name: Commit Updated Package.swift
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           
-          git add Package.swift
+          git add .
           
           if git diff --cached --quiet; then
             echo "No changes to commit."
