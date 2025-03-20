@@ -19,15 +19,11 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Read NEW_TAG
-        run: |
-          if [[ -f new_tag.txt ]]; then
-            NEW_TAG=$(cat new_tag.txt)
-            echo "NEW_TAG=$NEW_TAG" >> $GITHUB_ENV
-          else
-            echo "Failed to retrieve NEW_TAG."
-            exit 1
-          fi
+      - name: Download zip files
+        uses: actions/download-artifact@v4
+        with:
+          name: zip
+          path: zip-files
 
       - name: Create Git Tag
         run: |
@@ -40,7 +36,7 @@ jobs:
         with:
           tag_name: ${{ env.NEW_TAG }}
           name: Release ${{ env.NEW_TAG }}
-          files: build/*.zip
+          files: zip-files
           token: ${{ secrets.TARGET_REPO_TOKEN }}
           draft: true
           prerelease: true
