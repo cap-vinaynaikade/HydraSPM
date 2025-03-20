@@ -1,18 +1,16 @@
 name: Create Tag and GitHub Release
 
 on:
-  pull_request:
+  workflow_run:
+    workflows: ["Create zip for XCFrameworks"]  # Ensure it runs after the first workflow
     types:
-      - closed
-    branches:
-      - main
+      - completed
 
 permissions:
-  contents: write  # Grant write permissions to GitHub Actions   
+  contents: write  
 
 jobs:
   create_tag_release:
-    if: github.event.pull_request.merged == true
     runs-on: macos-latest
 
     steps:
@@ -22,8 +20,17 @@ jobs:
       - name: Download zip files
         uses: actions/download-artifact@v4
         with:
-          name: zip
+          name: zip-files
           path: zip-files
+
+      - name: Download Release Tag
+        uses: actions/download-artifact@v4
+        with:
+          name: release-tag
+          path: .
+
+      - name: Set NEW_TAG from file
+        run: echo "NEW_TAG=$(cat new_tag.txt)" >> $GITHUB_ENV
 
       - name: Create Git Tag
         run: |
@@ -36,7 +43,7 @@ jobs:
         with:
           tag_name: ${{ env.NEW_TAG }}
           name: Release ${{ env.NEW_TAG }}
-          files: zip-files
+          files: zip-files/*.zip  # Fixing file selection
           token: ${{ secrets.TARGET_REPO_TOKEN }}
           draft: true
           prerelease: true
