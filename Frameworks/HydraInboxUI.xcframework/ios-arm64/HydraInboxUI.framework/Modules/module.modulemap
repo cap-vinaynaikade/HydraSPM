@@ -1,0 +1,11 @@
+framework module HydraInboxUI {
+  umbrella header "HydraInboxUI.h"
+  export *
+
+  module * { export * }
+}
+
+module HydraInboxUI.Swift {
+  header "HydraInboxUI-Swift.h"
+  requires objc
+}

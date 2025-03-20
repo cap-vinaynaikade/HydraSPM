@@ -1,0 +1,260 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name HydraInAppMessage
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Combine
+import CoreData
+import DeveloperToolsSupport
+import Foundation
+import HydraCore
+@_exported import HydraInAppMessage
+import HydraPushNotification
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension HydraInAppMessage.InAppMessage {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<HydraInAppMessage.InAppMessage>
+  @objc @NSManaged dynamic public var cuid: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var scope: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var campaignId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var variationId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var senderID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var senderSource: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var custom: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var priority: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var validity: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var trigger: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var body: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var imageIdentifier: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var template: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+extension HydraInAppMessage.InAppMessage : Swift.Identifiable {
+  public typealias ID = Swift.ObjectIdentifier
+}
+public protocol HydraInAppMessageConfigGenerator {
+  var hydraConfig: any HydraCore.ConfigurationGenerator { get set }
+  var notificationCore: HydraPushNotification.NotificationCore? { get set }
+  var placeholderImage: UIKit.UIImage? { get set }
+  var appStoreId: Swift.String? { get set }
+}
+@objc public class InAppMessagingCore : ObjectiveC.NSObject {
+  public init(with config: any HydraInAppMessage.HydraInAppMessageConfigGenerator, environment env: HydraCore.Env = .dev, applicationState state: UIKit.UIApplication.State = .inactive) throws
+  public func userLoggedOut()
+  public func dismissInAppMessage(message: HydraInAppMessage.HydraInAppMessagePayload)
+  public func handleInAppMessageButtonAction(message: HydraInAppMessage.HydraInAppMessagePayload)
+  public func getPlaceholderImage() -> UIKit.UIImage?
+  @objc deinit
+}
+extension HydraInAppMessage.InAppMessagingCore : HydraPushNotification.HydraSilentPushNotificationProtocol {
+  public func handleSilentPushNotification(with userInfo: [Swift.AnyHashable : Any])
+}
+extension HydraInAppMessage.InAppMessagingCore : HydraPushNotification.HydraNotificationsReceiverProtocol {
+  public func getReceiverType() -> HydraPushNotification.NotificationsReceiverType
+  public func notificationsReceived(with notifications: [HydraCore.HydraNotificationPayload]?)
+}
+extension UIKit.UIApplication {
+  @_Concurrency.MainActor @preconcurrency public class func topViewController(_ base: UIKit.UIViewController? = nil) -> UIKit.UIViewController?
+}
+public struct InAppTriggerAPIResponse {
+  public static func generate(from userInfo: [Swift.AnyHashable : Any]) -> HydraInAppMessage.InAppTriggerAPIResponse
+}
+public enum HydraInAppNotificationType : Swift.String {
+  case badge
+  case popup
+  case fullScreen
+  case header
+  case footer
+  case rating
+  case feedback
+  case appRating
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HydraInAppNotificationTriggerType : Swift.String {
+  case instant
+  case appLaunch
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum TextFontStyle : Swift.String {
+  case regular
+  case bold
+  case italic
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct InAppCTA {
+  public var actionText: Swift.String!
+  public var action: Swift.String
+  public var type: Swift.String
+  public var isEmpty: Swift.Bool {
+    get
+  }
+}
+public struct InAppBody {
+  public var textRepresentation: Swift.String
+  public var type: HydraInAppMessage.HydraInAppNotificationType
+  public var title: Swift.String
+  public var message: Swift.String
+  public var image: Swift.String
+  public var ctas: [HydraInAppMessage.InAppCTA]
+  public var feedback: HydraInAppMessage.InAppFeedback
+  public var isEmpty: Swift.Bool {
+    get
+  }
+  public static func generate(from str: Swift.String) -> HydraInAppMessage.InAppBody
+}
+public struct NotificationTrigger {
+  public var textRepresentation: Swift.String
+  public var eventName: Swift.String
+  public var attributes: [Swift.String : Any]
+  public static func generate(from str: Swift.String) -> HydraInAppMessage.NotificationTrigger
+}
+public struct InAppMessageComponentStyle {
+  public var textColor: SwiftUICore.Color?
+  public var textSize: CoreFoundation.CGFloat
+  public var textFont: Swift.String?
+  public var textStyle: HydraInAppMessage.TextFontStyle
+  public var backgroundColor: SwiftUICore.Color?
+  public static func generate(from json: [Swift.AnyHashable : Any]) -> HydraInAppMessage.InAppMessageComponentStyle
+  public static func generate(from styleArray: [[Swift.AnyHashable : Any]]) -> [HydraInAppMessage.InAppMessageComponentStyle]
+}
+public struct InAppRatingStyle {
+  public var selectedColor: SwiftUICore.Color?
+  public var unselectedColor: SwiftUICore.Color?
+  public static func generate(from json: [Swift.AnyHashable : Any]) -> HydraInAppMessage.InAppRatingStyle
+}
+public struct InAppMessageStyle {
+  public var title: HydraInAppMessage.InAppMessageComponentStyle
+  public var message: HydraInAppMessage.InAppMessageComponentStyle
+  public var ctas: [HydraInAppMessage.InAppMessageComponentStyle]
+  public var rating: HydraInAppMessage.InAppRatingStyle
+  public var phoneBackgroundColor: SwiftUICore.Color?
+  public var layoutBackgroundColor: SwiftUICore.Color?
+  public var textRepresentation: Swift.String
+  public static func generate(from str: Swift.String) -> HydraInAppMessage.InAppMessageStyle
+}
+public enum InAppFeedbackSelectionType : Swift.String {
+  case singleSelection
+  case multiSelection
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct InAppFeedback {
+  public var selectionType: HydraInAppMessage.InAppFeedbackSelectionType
+  public var options: [Swift.String]
+  public static func generate(from userInfo: [Swift.AnyHashable : Any]) -> HydraInAppMessage.InAppFeedback
+}
+public struct HydraInAppMessagePayload {
+  public var cuid: Swift.String
+  public var scope: Swift.String
+  public var campaignId: Swift.String!
+  public var variationId: Swift.String!
+  public var senderID: Swift.String
+  public var senderSource: Swift.String
+  public var custom: Swift.String
+  public var priority: Swift.String
+  public var validity: Swift.String
+  public var messageId: Swift.String
+  public var gateway: HydraCore.NotificationGateway
+  public var trigger: HydraInAppMessage.NotificationTrigger
+  public var body: HydraInAppMessage.InAppBody
+  public var isRead: Swift.String
+  public var imageIdentifier: Swift.String
+  public var createdAt: Foundation.Date?
+  public var accountId: Swift.String
+  public var template: HydraInAppMessage.InAppMessageStyle
+  public static func generate(from userInfo: [Swift.AnyHashable : Any]) -> HydraInAppMessage.HydraInAppMessagePayload
+  public func getImageURL() -> Foundation.URL?
+  public func canDeleteInAppMessageWhenImageDownloadingFailed() -> Swift.Bool
+  public func getJSON() -> [Swift.String : Any]
+}
+extension HydraInAppMessage.HydraInAppMessagePayload {
+  public static func generate(from dbObj: HydraInAppMessage.InAppMessage) -> HydraInAppMessage.HydraInAppMessagePayload
+}
+public class HydraInAppMessageConfiguration : HydraInAppMessage.HydraInAppMessageConfigGenerator {
+  public var appStoreId: Swift.String?
+  public var hydraConfig: any HydraCore.ConfigurationGenerator
+  public var notificationCore: HydraPushNotification.NotificationCore?
+  public var placeholderImage: UIKit.UIImage?
+  public init(hydraConfig: any HydraCore.ConfigurationGenerator, notificationCore: HydraPushNotification.NotificationCore?, appStoreId: Swift.String?, placeholderImage: UIKit.UIImage? = nil)
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(InAppMessage) public class InAppMessage : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension HydraCore.DummyNotificationPayload {
+  public static func getDummyInAppMessagePayload(fileName: Swift.String? = nil) -> HydraInAppMessage.HydraInAppMessagePayload
+  public static func getDummyInAppTriggersResponse() -> HydraInAppMessage.InAppTriggerAPIResponse
+}
+extension HydraInAppMessage.HydraInAppNotificationType : Swift.Equatable {}
+extension HydraInAppMessage.HydraInAppNotificationType : Swift.Hashable {}
+extension HydraInAppMessage.HydraInAppNotificationType : Swift.RawRepresentable {}
+extension HydraInAppMessage.HydraInAppNotificationTriggerType : Swift.Equatable {}
+extension HydraInAppMessage.HydraInAppNotificationTriggerType : Swift.Hashable {}
+extension HydraInAppMessage.HydraInAppNotificationTriggerType : Swift.RawRepresentable {}
+extension HydraInAppMessage.TextFontStyle : Swift.Equatable {}
+extension HydraInAppMessage.TextFontStyle : Swift.Hashable {}
+extension HydraInAppMessage.TextFontStyle : Swift.RawRepresentable {}
+extension HydraInAppMessage.InAppFeedbackSelectionType : Swift.Equatable {}
+extension HydraInAppMessage.InAppFeedbackSelectionType : Swift.Hashable {}
+extension HydraInAppMessage.InAppFeedbackSelectionType : Swift.RawRepresentable {}

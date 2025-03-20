@@ -1,0 +1,86 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -enable-bare-slash-regex -module-name HydraPushNotification
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import Foundation
+import HydraCore
+@_exported import HydraPushNotification
+import Swift
+import UIKit
+import UserNotifications
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+extension HydraPushNotification.NotificationCore {
+  public func addNotificationReceiver(receiver: any HydraPushNotification.HydraNotificationsReceiverProtocol)
+  public func pullMessages(channels: [HydraPushNotification.PushNotificationChannel]? = nil)
+}
+extension HydraCore.HydraNotificationPayload {
+  public static func updateContent(content: inout UserNotifications.UNMutableNotificationContent, notification: HydraCore.HydraNotificationPayload)
+  public static func updateNotificationContent(_ request: UserNotifications.UNNotificationRequest) -> UserNotifications.UNMutableNotificationContent?
+  public static func createNotificationContent(from notification: HydraCore.HydraNotificationPayload) -> UserNotifications.UNMutableNotificationContent
+}
+@objc @_hasMissingDesignatedInitializers public class NotificationCore : ObjectiveC.NSObject {
+  public static var shared: HydraPushNotification.NotificationCore
+  public func update(sdk: HydraCore.Hydra)
+  public static func isAllowed() -> Swift.Bool
+  public func registerSilentPushListener(forModule module: Swift.String, delegate: (any HydraPushNotification.HydraSilentPushNotificationProtocol)?)
+  public func getSilentPushListner(forModule module: Swift.String) -> (any HydraPushNotification.HydraSilentPushNotificationProtocol)?
+  public func checkAndReportPermissions()
+  public func setNotificationCallbackDelagte(delegate: (any HydraPushNotification.HydraNotificationCallbackDelegate)?)
+  @discardableResult
+  public func userNotification(center: UserNotifications.UNUserNotificationCenter, willPresent notification: UserNotifications.UNNotification, withCompletionHandler completionHandler: @escaping (UserNotifications.UNNotificationPresentationOptions) -> Swift.Void) -> ((UserNotifications.UNNotificationPresentationOptions) -> Swift.Void)!
+  @discardableResult
+  public func userNotification(center: UserNotifications.UNUserNotificationCenter, didReceive response: UserNotifications.UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Swift.Void) -> (() -> Swift.Void)!
+  @discardableResult
+  public func application(_ application: UIKit.UIApplication, didReceiveRemoteNotification userInfo: [Swift.AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIKit.UIBackgroundFetchResult) -> Swift.Void) -> ((UIKit.UIBackgroundFetchResult) -> Swift.Void)!
+  public func application(_ application: UIKit.UIApplication, didFinishLaunchingWithOptions launchOptions: [UIKit.UIApplication.LaunchOptionsKey : Any]? = nil)
+  @objc deinit
+}
+extension HydraPushNotification.NotificationCore : HydraCore.HydraPushNotificationProtocol {
+  public func process(cta: HydraCore.CTA, notificationPayload payload: Any) -> Swift.Bool
+  public func pullUndeliveredNotifications()
+}
+public enum PushNotificationChannel : Swift.String {
+  case push
+  case inapp
+  case notificationCenter
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public protocol HydraSilentPushNotificationProtocol {
+  func handleSilentPushNotification(with userInfo: [Swift.AnyHashable : Any])
+}
+public protocol HydraNotificationCallbackDelegate : AnyObject {
+  func process(cta: HydraCore.CTA, notificationPayload payload: Any) -> Swift.Bool
+}
+public enum NotificationsReceiverType : Swift.Int {
+  case inbox
+  case inAppMessages
+  case localNotifications
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public protocol HydraNotificationsReceiverProtocol : AnyObject {
+  func getReceiverType() -> HydraPushNotification.NotificationsReceiverType
+  func notificationsReceived(with notifications: [HydraCore.HydraNotificationPayload]?)
+}
+extension HydraPushNotification.NotificationCore {
+  public func reportNotificationRejectedEvent(with attributes: HydraCore.Attributes, completion: HydraCore.CompletionHandler? = nil)
+  public func reportNotificationReceivedEvent(with attributes: HydraCore.Attributes, completion: HydraCore.CompletionHandler? = nil)
+  public func reportNotificationViewedEvent(with attributes: HydraCore.Attributes, completion: HydraCore.CompletionHandler? = nil)
+  public func reportNotificationClosedEvent(with attributes: HydraCore.Attributes, completion: HydraCore.CompletionHandler? = nil)
+  public func reportNotificationClickedEvent(with attributes: HydraCore.Attributes, completion: HydraCore.CompletionHandler? = nil)
+}
+extension HydraPushNotification.PushNotificationChannel : Swift.Equatable {}
+extension HydraPushNotification.PushNotificationChannel : Swift.Hashable {}
+extension HydraPushNotification.PushNotificationChannel : Swift.RawRepresentable {}
+extension HydraPushNotification.NotificationsReceiverType : Swift.Equatable {}
+extension HydraPushNotification.NotificationsReceiverType : Swift.Hashable {}
+extension HydraPushNotification.NotificationsReceiverType : Swift.RawRepresentable {}
