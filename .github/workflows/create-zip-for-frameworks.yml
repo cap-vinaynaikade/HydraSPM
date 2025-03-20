@@ -64,7 +64,7 @@ jobs:
             grep "${framework_name}.zip" Package.swift || echo "No match found for $framework_name"
             
             # Update the release tag with NEW_TAG
-            sed -i '' "s#https://github.com/cap-vinaynaikade/HydraSPM/releases/download/[0-9.]*/${framework_name}.zip#https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/${NEW_TAG}/${framework_name}.zip#" Package.swift
+            sed -i '' "s#https://github.com/cap-vinaynaikade/HydraSPM/releases/download/[0-9.]*/${framework_name}.zip#https://github.com/cap-vinaynaikade/HydraSPM/releases/download/${NEW_TAG}/${framework_name}.zip#" Package.swift
 
             # Use a temporary file for safe editing
             sed "s#\(url: .*${framework_name}.zip\", checksum: \)\"[^\"]*\"#\1\"${checksum}\"#" Package.swift > Package.swift.tmp && mv Package.swift.tmp Package.swift
