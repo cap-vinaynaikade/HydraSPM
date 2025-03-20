@@ -1,0 +1,43 @@
+name: Create Tag and GitHub Release
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+      - main
+
+jobs:
+  create_tag_release:
+    if: github.event.pull_request.merged == true
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Read NEW_TAG
+        run: |
+          if [[ -f new_tag.txt ]]; then
+            NEW_TAG=$(cat new_tag.txt)
+            echo "NEW_TAG=$NEW_TAG" >> $GITHUB_ENV
+          else
+            echo "Failed to retrieve NEW_TAG."
+            exit 1
+          fi
+
+      - name: Create Git Tag
+        run: |
+          git tag $NEW_TAG
+          git push origin $NEW_TAG
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.NEW_TAG }}
+          name: Release ${{ env.NEW_TAG }}
+          files: build/*.zip
+          token: ${{ secrets.TARGET_REPO_TOKEN }}
+          draft: true
+          prerelease: true
