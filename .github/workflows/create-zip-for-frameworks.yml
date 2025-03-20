@@ -9,7 +9,7 @@ permissions:
   contents: write  # Grant write permissions to GitHub Actions      
 
 jobs:
-  release:
+  action-a:
     name: Build and Update Package.swift
     runs-on: macos-latest
 
@@ -29,7 +29,6 @@ jobs:
           echo "Extracted branch name: $BRANCH_NAME"
           if [[ "$BRANCH_NAME" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             echo "NEW_TAG=$BRANCH_NAME" >> $GITHUB_ENV
-            echo "$BRANCH_NAME" > new_tag.txt
           else
             echo "Branch name does not follow release-<version> format."
             exit 1
@@ -80,12 +79,6 @@ jobs:
           name: zip-files
           path: build/*.zip
 
-      - name: Upload NEW_TAG as Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-tag
-          path: new_tag.txt
-
       - name: Clean Build Directory
         run: rm -rf build checksums.txt new_tag.txt
 
@@ -103,3 +96,31 @@ jobs:
           
           git commit -m "Update checksums in Package.swift"
           git push origin HEAD
+
+  action-b:
+    name: Create and Release Tag
+    needs: action-a
+    runs-on: macos-latest
+
+    steps:
+      - name: Download zip files
+        uses: actions/download-artifact@v4
+        with:
+          name: zip-files
+          path: zip-files
+  
+      - name: Create Git Tag
+        run: |
+          git tag $NEW_TAG
+          git push origin $NEW_TAG
+  
+      - name: Create GitHub Release
+        id: create_release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ env.NEW_TAG }}
+          name: Release ${{ env.NEW_TAG }}
+          files: zip-files/*.zip  # Fixing file selection
+          token: ${{ secrets.GITHUB_TOKEN }}
+          draft: true
+          prerelease: true
