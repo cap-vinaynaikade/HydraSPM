@@ -73,8 +73,15 @@ jobs:
           echo "Final Package.swift contents:"
           cat Package.swift
 
-      - name: Remove checksum file
+      - name: Upload zip files as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: zip
+          path: build/*
+
+      - name: Clean Build Directory
         run: |
+          rm -rf build
           rm -f checksums.txt
 
       - name: Commit Updated Package.swift
@@ -82,7 +89,6 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           
-          git add build/*.zip
           git add Package.swift
           
           if git diff --cached --quiet; then
