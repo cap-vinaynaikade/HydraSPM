@@ -29,6 +29,7 @@ jobs:
           echo "Extracted branch name: $BRANCH_NAME"
           if [[ "$BRANCH_NAME" =~ ^[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
             echo "NEW_TAG=$BRANCH_NAME" >> $GITHUB_ENV
+            echo "$BRANCH_NAME" > new_tag.txt
           else
             echo "Branch name does not follow release-<version> format."
             exit 1
@@ -86,7 +87,7 @@ jobs:
           path: new_tag.txt
 
       - name: Clean Build Directory
-        run: rm -rf build Frameworks checksums.txt new_tag.txt
+        run: rm -rf build checksums.txt new_tag.txt
 
       - name: Commit Updated Package.swift
         run: |
