@@ -33,11 +33,11 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .binaryTarget(name: "HydraCore", url: "https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraCore.zip", checksum: "1a1f5113d2a806b83a534f672e359fabe175f9343590295d8bc2b0a76509c410"),
-        .binaryTarget(name: "HydraInAppMessage", url: "https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraInAppMessage.zip", checksum: "25b48eb7bf90e8b04d3a4a4cb99f3d9efab9add040d6e2652d6e3b9f8dcd254a"),
-        .binaryTarget(name: "HydraPushNotification", url: "https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraPushNotification.zip", checksum: "4e879aaa83d2b41b52b04fa74616fa55a43d9a6a3b09e57ae9883b43410660b4"),
-        .binaryTarget(name: "HydraPushNotificationServiceExtension", url: "hhttps://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraPushNotificationServiceExtension.zip", checksum: "b858c1c692fb9c10528a66e8f50254cbfe90da9ae219a5dbcddeadf3b6dd8e3c"),
-        .binaryTarget(name: "HydraInboxCore", url: "https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraInboxCore.zip", checksum: "c42150941b5ef64db069e9cc90d775d2d5d0704def31c489065b59d6faeed81b"),
-        .binaryTarget(name: "HydraInboxUI", url: "https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraInboxUI.zip", checksum: "eb30b3a363eb86b3e6dff90df792f7be17f912093c86965588f68ab9466a384b"),
+        .binaryTarget(name: "HydraCore", url: "https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraCore.zip", checksum: "841aaa55b2dc860d1e1c257416740d39041ef9f3bf55e91703ece9d8f79a86b2"),
+        .binaryTarget(name: "HydraInAppMessage", url: "https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraInAppMessage.zip", checksum: "828c5336eb84da36ea1a5e7a29b787ae2cc5c3d9a9b76b064c657f7b9a6b004e"),
+        .binaryTarget(name: "HydraPushNotification", url: "https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraPushNotification.zip", checksum: "dbf559b772ac14009310d216d8af01b962bf7d42285ab18aa3f3a519961097a4"),
+        .binaryTarget(name: "HydraPushNotificationServiceExtension", url: "hhttps://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraPushNotificationServiceExtension.zip", checksum: "4cff6a22be64e88f67fa592ddad45bfab9e3f3df692f22c2d3e4afd6464c96f7"),
+        .binaryTarget(name: "HydraInboxCore", url: "https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraInboxCore.zip", checksum: "fda155efe3f20686393904ccc674c5429253514de8a387437378142cf54c3394"),
+        .binaryTarget(name: "HydraInboxUI", url: "https://github.com/Capillary/hydra-sdk-ios-packages/releases/download/1.0.3/HydraInboxUI.zip", checksum: "d02da7f7997b4b157f068be1c45aab035da0e5bd832b966fec96e6ce9914f4e0"),
     ]
 )
