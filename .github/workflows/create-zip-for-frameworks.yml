@@ -87,4 +87,4 @@ jobs:
           fi
           
           git commit -m "Update checksums in Package.swift"
-          git push origin HEAD
+          git push https://x-access-token:${{ secrets.TARGET_REPO_TOKEN }}@github.com/cap-vinaynaikade/HydraSPM.git HEAD
